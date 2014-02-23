@@ -11,7 +11,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'slider'], function (app, $, Slider) {
+require(['app', 'jquery', 'slider', 'css3Slider'], function (app, $, Slider, Css3Slider) {
     'use strict';
     // use app here
     console.log(app);
@@ -21,4 +21,5 @@ require(['app', 'jquery', 'slider'], function (app, $, Slider) {
     $('#baseSlider').slider({
         speed: 200
     });
+    $('#css3Slider').css3slider();
 });
