@@ -6,7 +6,6 @@ define(['jquery', 'slider'], function($, Slider){
 	
 	css3SliderMethods = {
 		move: function(){
-			console.log('move');
 			var t = this;
 			function _callback(){
 				t.updateView();

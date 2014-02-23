@@ -21,5 +21,7 @@ require(['app', 'jquery', 'slider', 'css3Slider'], function (app, $, Slider, Css
     $('#baseSlider').slider({
         speed: 200
     });
-    $('#css3Slider').css3slider();
+    $('#css3Slider').css3slider({
+        speed: 1000
+    });
 });
