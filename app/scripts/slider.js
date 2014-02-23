@@ -38,9 +38,14 @@ sliderMethods = {
 			t.prev();
 			e.preventDefault();
 		}
+		function _goTo(e){
+			t.goTo( $(this).data('index') );
+			e.preventDefault();
+		}
 
 		this.btnNext.on( 'click', _next );
 		this.btnPrev.on( 'click', _prev );
+		this.paging.on( 'click', 'a', _goTo );
 	},
 	layout: function(){
 		var t = this;
@@ -87,8 +92,8 @@ sliderMethods = {
 		}, this.opts.speed, _callback);
 	},
 	goTo: function(n){
-		this.index = this.getIndex();
 		if( this.index === n ){ return n; }
+		this.index = this.getIndex(n);
 		this.move();
 	},
 	next: function(){
