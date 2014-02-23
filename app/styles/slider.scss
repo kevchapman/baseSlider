@@ -1,0 +1,40 @@
+.slider{
+	position: relative;
+	.mask{
+		overflow: hidden;
+	}
+	.scroller{
+		margin: 0;
+		list-style-type: none;
+		position: relative;
+		li{
+			float: left;
+		}
+	}
+	.next, .prev{
+		color: #aaa;
+	}
+	.paging{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: inline-block;
+		li{
+			display: inline-block;
+			margin: 0 2px;
+			span{
+				display: none;
+			}
+		}
+		a{
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #eee;
+			&.active{
+				background: #aaa;
+			}
+		}
+	}
+}
