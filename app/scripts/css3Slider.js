@@ -1,7 +1,8 @@
 define(['jquery', 'slider'], function($, Slider){
 
 	function Css3Slider(ele, opts){
-		Slider.apply(this, arguments);
+		var s = new Slider(ele, opts);
+		s.apply(this, arguments);
 	}
 	
 	css3SliderMethods = {
